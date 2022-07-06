@@ -1,0 +1,26 @@
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.nav-links > a {
+  text-decoration: none;
+}
+
+.nav-link {
+  margin-right: 1.5rem;
+}
+
+.cart-logos {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.active {
+  color: #5ECE7B;
+  border-bottom: 1px solid #5ECE7B;
+  padding-bottom: 1rem;
+}

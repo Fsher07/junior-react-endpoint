@@ -13,8 +13,18 @@ query {
 }`;
 
 export default function Home() {
-  const FETCH_DATA = useQuery(GET_DATA);
+  const { loading, data } = useQuery(GET_DATA);
 
-  if (!FETCH_DATA.loading) console.log(FETCH_DATA.data);
-  return <div />;
+  if (!loading) console.log(data.categories);
+  return (
+    <div className="Home">
+      {
+        loading ? (
+          <div>nono</div>
+        ) : (
+          <p>{data.categories[0].products[0].name}</p>
+        )
+      }
+    </div>
+  );
 }
